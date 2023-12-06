@@ -12,7 +12,15 @@ require("dotenv").config();
 const PORT = process.env.PORT || 3051;
 
 // middleware
-app.use(cors());
+app.use(
+    cors({
+      // entertain the frontend
+      origin: "",
+      methods:["POST","GET"],
+      credentials: true,
+    })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
