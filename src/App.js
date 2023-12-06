@@ -70,7 +70,7 @@ function App() {
 
   // Delete User / Delete Method
   function deleteUser(id) {
-    fetch(`http://localhost:3051/api/contact/${id}`, {
+    fetch(`https://contact-list-27kr.vercel.app/api/contact/${id}`, {
       method: "DELETE",
     }).then((result) => {
       result.json().then((response) => {
@@ -94,7 +94,7 @@ function App() {
 
   function updateUser() {
     let id = isEdit;
-    fetch(`http://localhost:3051/api/contact/${id}`, {
+    fetch(`https://contact-list-27kr.vercel.app/api/contact/${id}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -126,7 +126,7 @@ function App() {
     if (!input.email || !input.mobile || !input.name) {
       alert("Enter tbe Data");
     } else {
-      fetch("http://localhost:3051/api/contact", {
+      fetch("https://contact-list-27kr.vercel.app/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json",
