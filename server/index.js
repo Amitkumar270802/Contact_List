@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/login");
 const cors = require("cors");
-
+const dotenv = require("dotenv");
 const database = require("./config/database");
 // Create an instance of express 
 const app = express();
