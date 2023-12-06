@@ -60,7 +60,7 @@ function App() {
 
   // // Show User / Get Method
   function getUser() {
-    fetch("https://contact-list-bxxr.vercel.app/api/contact").then((result) => {
+    fetch("http://localhost:3000/api/contact").then((result) => {
       result.json().then((response) => {
         console.warn("Result: ", response);
         setAllInputs(response);
@@ -70,7 +70,7 @@ function App() {
 
   // Delete User / Delete Method
   function deleteUser(id) {
-    fetch(`https://contact-list-bxxr.vercel.app/api/contact/${id}`, {
+    fetch(`http://localhost:3000/api/contact/${id}`, {
       method: "DELETE",
     }).then((result) => {
       result.json().then((response) => {
@@ -94,7 +94,7 @@ function App() {
 
   function updateUser() {
     let id = isEdit;
-    fetch(`https://contact-list-bxxr.vercel.app/api/contact/${id}`, {
+    fetch(`http://localhost:3000/api/contact/${id}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -126,7 +126,7 @@ function App() {
     if (!input.email || !input.mobile || !input.name) {
       alert("Enter tbe Data");
     } else {
-      fetch("https://contact-list-bxxr.vercel.app/api/contact", {
+      fetch("http://localhost:3000/api/contact", {
         method: "POST",
         headers: {
           Accept: "application/json",
