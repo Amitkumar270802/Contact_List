@@ -60,7 +60,7 @@ function App() {
 
   // // Show User / Get Method
   function getUser() {
-    fetch("http://localhost:3051/api/contact").then((result) => {
+    fetch("https://contact-list-27kr.vercel.app/api/contact").then((result) => {
       result.json().then((response) => {
         console.warn("Result: ", response);
         setAllInputs(response);
